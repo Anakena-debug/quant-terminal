@@ -1,0 +1,18 @@
+# Quant Terminal configuration.
+#
+# Copy to `config.local.toml` (gitignored) to keep personal settings/secrets
+# out of version control — it takes precedence over this file.
+
+# Data source: "simulated" (default, no setup) or "ibkr" (live, needs gateway).
+provider = "simulated"
+
+# Symbols shown in the watchlist on startup.
+watchlist = ["AAPL", "MSFT", "NVDA", "TSLA", "AMZN", "GOOGL", "META", "SPY", "QQQ"]
+
+# Interactive Brokers connection (used only when provider = "ibkr").
+# Requires IB Gateway or TWS running with the API enabled, and 127.0.0.1 trusted.
+[ibkr]
+host = "127.0.0.1"
+port = 4002        # IB Gateway paper = 4002, live = 4001; TWS paper = 7497, live = 7496
+client_id = 100
+delayed = true     # paper accounts usually get delayed data; shows the DELAYED badge

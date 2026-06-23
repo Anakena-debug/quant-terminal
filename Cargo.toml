@@ -1,0 +1,39 @@
+[package]
+name = "quantterm"
+version = "0.1.0"
+edition = "2024"
+description = "Quant Terminal — a Bloomberg-style terminal for quantitative analysts"
+authors = ["Jules Verdez"]
+license = "MIT"
+readme = "README.md"
+keywords = ["tui", "finance", "trading", "quant", "ratatui"]
+categories = ["command-line-utilities", "visualization"]
+
+[[bin]]
+name = "qterm"
+path = "src/main.rs"
+
+[dependencies]
+async-trait = "0.1.89"
+chrono = "0.4.45"
+chrono-tz = "0.10.4"
+color-eyre = "0.6.5"
+futures = "0.3.32"
+ibapi = "3.1.0"
+ratatui = "0.30.2"
+serde = { version = "1.0.228", features = ["derive"] }
+thiserror = "2.0.18"
+tokio = { version = "1.52.3", features = ["full"] }
+toml = "1.1.2"
+tracing = "0.1.44"
+tracing-appender = "0.2.5"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+
+# Snappier TUI while developing without full release build times.
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
