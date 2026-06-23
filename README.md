@@ -1,3 +1,8 @@
+<img width="1897" height="1004" alt="image" src="https://github.com/user-attachments/assets/7521a872-06ba-41c3-b8e2-46e729c5a792" />
+
+<img width="1898" height="991" alt="image" src="https://github.com/user-attachments/assets/6245ac04-836e-4d76-a47d-4ae2bbccd9aa" />
+
+
 # Quant Terminal (`qterm`)
 
 A Bloomberg-style terminal for quantitative analysts — a fast, keyboard-driven TUI built in
